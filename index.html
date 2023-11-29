@@ -1,10 +1,74 @@
 <!document html>
+<style>
+    h1 {
+        color: rgb(36,66,77)
+    }
+
+    form {
+        border: 1px solid #000;
+        border-radius: 5px;
+        width: 650px;
+        height: 410px;
+        background-color: rgb(94,150,161);
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    input {
+        font-size: 30px;
+        width: 600px;
+        height: 80px;
+        color: rgb(42,84,99);
+        background-color: rgb(177,194,186);
+    }
+</style>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Good luck all the time！</title>
+    <meta charset="utf-8" />
+    <title>mywebsite</title>
 </head>
-<body>
-<h1>笨蛋杨烁</h1>
+<body background="beauty.jpg"
+      style="background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-size:100% 100%;">
+    <div style="text-align: center; margin: 0 auto; border: 0">
+        <form method="post">
+            <h1><strong><em>authentication</em></strong></h1>
+            <input type="text" placeholder="name" id="name" required="required"/><br />
+            <input type="number" placeholder="birthdayMonth(for example):1" id="month" required="required"/><br />
+            <input type="number" placeholder="birthdayDay(for example):1" id="day" required="required"/><br />
+            <input style="color: rgb(42,84,99); background-color: rgb(115,157,156); width:200px; height: 80px " type="submit" value="submit" name="submit" onclick="login()" />
+        </form>
+    </div>
 </body>
 </html>
+
+
+    <script type="text/javascript">//登陆判断
+        var account = { username: "lily", month: 12, day: 3 };
+			function login() { 
+				let username = document.getElementById('name').value;
+                let month = document.getElementById('month').value;
+                let day = document.getElementById('day').value;
+                if (account.username != username) { alert("your name is wrong"); }
+                else if (account.month != month) { alert("your birthdayMonth is wrong"); }
+                else if (account.day != day) { alert("your birthdayDay is wrong"); }
+                else { alert("loading");
+                      window.location.href="https://www.icourse163.org/"; 
+                     }
+			}
+    </script>
+    
